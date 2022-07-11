@@ -10,13 +10,16 @@ package model;
  * @author Arvin Situmorang
  */
 public class User {
-    
+
     private int id;
     private String name;
     private String email;
     private String password;
     private int idCategory;
     private String photo;
+
+    public User() {
+    }
 
     public User(int id, String name, String email, String password, int idCategory, String photo) {
         this.id = id;
@@ -74,6 +77,5 @@ public class User {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
-    
-    
+
 }
