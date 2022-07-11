@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -105,6 +106,7 @@ public class Register implements ActionListener {
         if (ae.getSource() == button2) {
             new Main();
         } else if (ae.getSource() == button1) {
+            JOptionPane.showMessageDialog(null, "Successfully registered! Please log in..");
             insertNewUser(name);
         }
     }
