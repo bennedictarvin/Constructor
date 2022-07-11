@@ -83,7 +83,7 @@ public class Login implements ActionListener {
             if (textFieldName.getText().isEmpty() || textFieldPassword.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Please fill in your email & password first!");
             } else {
-                JOptionPane.showMessageDialog(null, "Login sukses!");
+                JOptionPane.showMessageDialog(null, "Successfully logged in!");
                 new ViewData();
             }
         } else {
