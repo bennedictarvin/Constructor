@@ -5,10 +5,13 @@
  */
 package model;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -18,11 +21,11 @@ import javax.swing.JTable;
  *
  * @author Arvin Situmorang
  */
-public class ViewData {
+public class ViewData implements ActionListener{
 
     static DatabaseHandler conn = new DatabaseHandler();
-    User user;
-    
+    static User user;
+
     public static ArrayList<User> getAllUsers() {
         ArrayList<User> users = new ArrayList<>();
         conn.connect();
@@ -34,9 +37,10 @@ public class ViewData {
                 user = new User();
                 user.setId(rs.getInt("ID"));
                 user.setName(rs.getString("Name"));
-                user.setAddress(rs.getString("Address"));
-                user.setPhone(rs.getString("Phone"));
-                user.setAge(rs.getInt("Age"));
+                user.setEmail(rs.getString("Email"));
+                user.setPassword(rs.getString("password"));
+                user.setIdCategory(rs.getInt("idCategory"));
+                user.setPhoto("photo");
                 users.add(user);
             }
         } catch (SQLException e) {
@@ -47,8 +51,9 @@ public class ViewData {
     }
 
     JFrame frame;
-    JComboBox user, button;
+    JComboBox pengguna, button;
     JTable table;
+    JButton button1, button2;
 
     public ViewData() {
 
@@ -67,11 +72,29 @@ public class ViewData {
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        
+        button1 = new JButton();
+        button1.setText("Nama Kategori User");
+        button1.setBounds(10, 350, 100, 50);
+        button1.addActionListener(this);
+        button1.setVerticalAlignment(JButton.CENTER);
+        button1.setHorizontalAlignment(JButton.CENTER);
+
+        button2 = new JButton();
+        button2.setText("Search");
+        button2.setBounds(120, 350, 100, 50);
+        button2.addActionListener(this);
+        button2.setVerticalAlignment(JButton.CENTER);
+        button2.setHorizontalAlignment(JButton.CENTER);
     }
 
     public static void main(String[] args) {
         new ViewData();
     }
 
-    
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        
+    }
+
 }
