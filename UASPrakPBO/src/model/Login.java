@@ -35,6 +35,7 @@ public class Login implements ActionListener {
         frame.setSize(500, 500);
         
         JLabel labelName = new JLabel();
+        labelName.setIcon(image);
         labelName.setText("Enter your email address:");
         labelName.setBounds(10, 30, 200, 100);
 
