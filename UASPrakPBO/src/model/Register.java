@@ -107,7 +107,7 @@ public class Register implements ActionListener {
             new Main();
         } else if (ae.getSource() == button1) {
             JOptionPane.showMessageDialog(null, "Successfully registered! Please log in..");
-            insertNewUser(name);
+            new Login();
         }
     }
 
