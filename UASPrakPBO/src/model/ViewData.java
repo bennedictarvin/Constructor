@@ -68,10 +68,7 @@ public class ViewData implements ActionListener{
 
         JScrollPane scroll = new JScrollPane(table);
 
-        frame.add(scroll);
-        frame.setLayout(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        
         
         button1 = new JButton();
         button1.setText("Nama Kategori User");
@@ -86,6 +83,13 @@ public class ViewData implements ActionListener{
         button2.addActionListener(this);
         button2.setVerticalAlignment(JButton.CENTER);
         button2.setHorizontalAlignment(JButton.CENTER);
+        
+        frame.add(scroll);
+        frame.add(button1);
+        frame.add(button2);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {
