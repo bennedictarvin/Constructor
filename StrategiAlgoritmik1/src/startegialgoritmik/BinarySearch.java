@@ -17,7 +17,7 @@ public class BinarySearch {
     // terlebih dahulu data-data yang ada lalu kemudian dilakukan proses
     // pencarian. Untuk pengurutan dilakukan dalam O(nlogn) time, sedangkan
     // untuk proses pencarian dilakukan dengan O(logn) time, dengan time complexity
-    // O(nlogn) + O(logn) = O(nlogn). Ini lebih lama dari segi proses dibandingkan
+    // O(nlogn) + O(logn) = O(nlogn). Ini kurang efisien dari segi proses dibandingkan
     // dengan Sequential Search karena pekerjaan yang membutuhkan dua tahap yakni
     // sorting & searching.
     static void search(int[] a, int x, int y, int k) {
