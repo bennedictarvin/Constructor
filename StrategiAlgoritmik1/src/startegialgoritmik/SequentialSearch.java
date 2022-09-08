@@ -12,12 +12,11 @@ import java.util.Scanner;
  * @author Arvin Situmorang
  */
 public class SequentialSearch {
-    
+
     // Sequential Search merupakan cara pencarian data dengan membandingkan
     // satu per satu data yang ingin dicari dengan setiap data yang ada.
     // Cara ini menggunakan O(n) time, dengan waktu pencarian yang lebih efisien
     // dibandingkan dengan Binary Search.
-
     static int search(int[] a, int k) {
         int i = 0;
         int n = a.length;
@@ -26,6 +25,20 @@ public class SequentialSearch {
         }
         if (i < n) {
             return i + 1;
+        } else {
+            return -1;
+        }
+    }
+
+    static int search2(int[] a, int k) {
+        int n = a.length;
+        a[n] = k;
+        int i = 0;
+        while (a[i] != k) {
+            i++;
+        }
+        if (i < n) {
+            return i;
         } else {
             return -1;
         }
