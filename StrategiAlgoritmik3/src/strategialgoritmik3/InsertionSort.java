@@ -33,7 +33,7 @@ public class InsertionSort {
     }
 
     public InsertionSort() {
-        int[] arr = {30, 17, 11, 4, 28, 15, 8, 9};
+        int[] arr = {0, 0, 0, 0, 1, 1, 1, 1};
         System.out.println("Hasil sorting: " + search(arr));
         print(arr);
     }

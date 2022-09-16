@@ -34,9 +34,9 @@ public class BinarySearch {
     }
 
     public BinarySearch() {
-        int[] arr = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        int[] arr = {1, 1, 1, 1, 0, 0, 0, 0};
         int n = arr.length;
-        System.out.println(binarySearch(arr, 8));
+        System.out.println(binarySearch(arr, 1));
         print(arr);
     }
 
